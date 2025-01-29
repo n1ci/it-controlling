@@ -1,6 +1,31 @@
 import numpy_financial as npf
 import pandas as pd
 
+# Gegeben seien ein Projekt A (Anfangsinvestition CHF 220000, Rückflusse pro Jahr s. unten) und ein Projekt B (Anfangsinvestition CHF 250000, Rückflusse pro Jahr s. unten), beide jeweils mit einer Laufzeit von 5 Jahren. Der Zinssatz beträgt 5%.
+#
+# Jahr	Rückflüsse (Einzahlungen) CHF Projekt A	Rückflüsse (Einzahlungen) CHF Projekt B
+# 1	75000	80000
+# 2	65000	70000
+# 3	55000	60000
+# 4	45000	50000
+# 5	35000	40000
+# Wert	A	B
+# Interne Kapitalverzinsung (IRR auf Englisch) in % (nur Zahl, keine Einheiten!!)	Antwort 1 Frage 2
+# 9.12
+#  [W: 20%]	Antwort 2 Frage 2
+# 7.26
+#  [W: 20%]
+# Nettobarwert (Net Present Value NPV auf Englisch) in CHF (nur Zahl, keine Einheiten!!)	Antwort 3 Frage 2
+# 22341.58
+#  [W: 20%]	Antwort 4 Frage 2
+# 13988.97
+#  [W: 20%]
+# Entscheiden Sie sich aufgrund des Kriteriums Nettobarwert (Net Present Value NPV auf Englisch) für das "wirtschaftlich bessere" Projekt!
+#
+# Antwort 5 Frage 2
+# Proj A
+
+
 
 def calculate_project_evaluation(initial_investment, cash_flows, discount_rate):
     irr = npf.irr([initial_investment] + cash_flows) * 100  # in Prozent (interne Kapitalverzinsung)
